@@ -1,38 +1,28 @@
-    <!DOCTYPE html>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ToDoリスト</title>
-        <link rel="stylesheet" href="{{asset('css/sanitize.css')}}">
-        <link rel="stylesheet" href="{{asset('css/common.css')}}">
-        @yield('css')
+<!DOCTYPE html>
+<html lang="ja">
 
-    </head>
-    <body>
-        <header class="header">
-            <div class="header-tittle">Todo</div>
-                
-        </header>
-        
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+  <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/common.css') }}">
+  @yield('css')
+</head>
 
-        <main>
-                <form class="header-result" action="" method="post">
-                <input type="text" name="result" value=""/>
-                </form>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="header__logo" href="/">
+        Todo
+      </a>
+    </div>
+  </header>
 
-            <div>
-                <form action="" method="post">
-                <input type="text" name="content" />
-                
-                <button type="submit">送信</button>
-                </form>
-            </div>
-
-            
-        </main>
-
-    
-    
+  <main>
+    @yield('content')
+  </main>
 </body>
+
 </html>
